@@ -1,0 +1,49 @@
+# Suleiman ibn Qutulmish, founder of the Sultanate of Rum. Already in the game
+3046 = {
+	name = "Suleiman ibn Qutulmish"
+	dna = # TODO: SET DNA
+	dynasty = 613 # Seljuk
+	martial = 15
+	diplomacy = 8
+	intrigue = 12
+	stewardship = 12
+	
+	religion = "ashari"
+	culture = "turkish"
+	
+	trait = diligent
+	trait = just
+	
+	trait = education_martial_4
+	
+	disallow_random_traits = yes
+	
+	father = 3033 
+	mother = 
+	
+	846.7.29 = {
+		birth = yes
+	}
+	920.5.25 = {
+		death = yes
+	}
+}
+
+3046 = {
+	name = "Suleyman"
+	dynasty = 613
+	martial = 4
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 11
+	religion = "ashari"
+	culture = "turkish"
+	trait = education_martial_2
+	father = 3033
+	1039.1.2 = {
+		birth = "1039.1.2"
+	}
+	1086.1.1 = {
+		death = "1086.1.1"
+	}
+}
