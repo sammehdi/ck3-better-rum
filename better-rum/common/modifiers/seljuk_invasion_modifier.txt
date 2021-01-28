@@ -1,0 +1,3 @@
+seljuk_invasion_modifier = { # Unlocks one-time Seljuk Invasion CB
+	icon = prestige_positive
+}

@@ -1,0 +1,15 @@
+﻿l_english:
+  # Localization for Seljuks after successfully invading Armenia
+  seljuk_invasion_events.0001.title:0 "Victory in Armenia!"
+  seljuk_invasion_events.0001.desc:0 "Having defeated the Byzantines in battle, we have established our control over Armenia. Once we recoup our forces, we shall take over the rest of Asia Minor!"
+  seljuk_invasion_events.0001.a:0 "Onwards!"
+
+  # Localization for Byzantines after failing to defend Armenia
+  seljuk_invasion_events.0002.title:0 "Defeat"
+  seljuk_invasion_events.0002.desc:0 "With the Seljuks now in control of Armenia, the rest of Asia Minor lies open to them. The Turks now eye the heartland of the Byzantine Empire itself. With our own Turkish mercenaries defecting and our morale having plummeted, how are we supposed to defend against them?"
+  seljuk_invasion_events.0002.a:0 "This is a disaster!"
+
+  # Localization for event in which Seljuk Emperor gets help from Suleyman ibn Qutulmish
+  seljuk_invasion_events.0003.title:0 "Even More Help?""
+  seljuk_invasion_events.0003.desc:0 "Even though I did not ask, Suleyman ibn Qutulmish, a distant relation of mine, insists on aiding me in my conquest of Asia Minor. Doubtless, facing such an overwhelming force, the Greeks have no chance."
+  seljuk_invasion_events.0002.a:0 "I'll be keeping an eye on him."

@@ -1,0 +1,101 @@
+# Upon winning initial war over Armenia, Seljuk Emperor gets event 0001
+# Upon declaring next war for rest of Asia Minor, Seljuk Emperor gets event 0002
+# Upon winning war for Asia Minor, Seljuk Emperor gets event 0003
+
+namespace = seljuk_events
+
+# Winning first initial war with Seljuks
+seljuk_invasion_events.0001 = {
+	
+	title = seljuk_invasion_events.0001.title
+	desc = seljuk_invasion_events.0001.desc
+	theme = war
+	
+	# Left portrait is Byzantine Emperor, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = shame
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		character = war_over_win
+	}
+	
+	immediate = {
+		# Grant Seljuk Emperor CB to invade most of Asia Minor
+	}
+	
+	# Soon, all Asia Minor will be ours!
+	option = {
+		name = seljuk_invasion_events.0001.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+}
+
+# Byzantine Emperor gets this event when Seljuks win first war
+seljuk_invasion_events.0002 = {
+	title = seljuk_invasion_events.0002.title
+	desc = seljuk_invasion_events.0002.desc
+	theme = war
+	
+	# Left portrait is Byzantine Emperor, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = shame
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		character = war_over_win
+	}
+	
+	immediate = {
+		# Grant Seljuk Emperor CB to invade most of Asia Minor
+	}
+	
+	# This is bad!
+	option = {
+		name = seljuk_invasion_events.0002.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
+# Seljuk Emperor declares war for Asia Minor, Suleiman ibn Qutulmish 'helps' if he's alive (he should be)
+seljuk_invasion_events.0003 = {
+	title = "Help arrives!" # seljuk_invasion_events.
+	desc = "This guy" # seljuk_invasion_events.
+	theme = war
+	
+	# Left portrait is Seljuk Emperor, right portrait is Suleiman
+	left_portrait = {
+		character = title:e_persia.holder
+		animation = dismissal
+	}
+	
+	right_portrait = {
+		character = title:e_byzantium.holder # PLACEHOLDER
+		character = personality_bold
+	}
+	
+	immediate = {
+		# Suleiman joins war as attacker
+		# add_attacker
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0003.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
