@@ -1,8 +1,8 @@
-# Upon winning initial war over Armenia, Seljuk Emperor gets event 0001
+﻿# Upon winning initial war over Armenia, Seljuk Emperor gets event 0001
 # Upon declaring next war for rest of Asia Minor, Seljuk Emperor gets event 0002
 # Upon winning war for Asia Minor, Seljuk Emperor gets event 0003
 
-namespace = seljuk_events
+namespace = seljuk_invasion_events
 
 # Winning first initial war with Seljuks
 seljuk_invasion_events.0001 = {
@@ -19,11 +19,20 @@ seljuk_invasion_events.0001 = {
 	
 	right_portrait = {
 		character = title:e_persia.holder
-		character = war_over_win
+		animation = war_over_win
 	}
 	
 	immediate = {
 		# Grant Seljuk Emperor CB to invade most of Asia Minor
+		custom_tooltip = seljuk_invasion_cb_tooltip
+		hidden_effect = {
+			house = {
+				add_house_modifier = {
+					modifier = seljuk_invasion_modifier
+					years = 100
+				}
+			}
+		}
 	}
 	
 	# Soon, all Asia Minor will be ours!
@@ -51,11 +60,12 @@ seljuk_invasion_events.0002 = {
 	
 	right_portrait = {
 		character = title:e_persia.holder
-		character = war_over_win
+		animation = war_over_win
 	}
 	
 	immediate = {
 		# Grant Seljuk Emperor CB to invade most of Asia Minor
+		custom_tooltip = seljuk_invasion_cb_tooltip
 	}
 	
 	# This is bad!
@@ -71,8 +81,8 @@ seljuk_invasion_events.0002 = {
 
 # Seljuk Emperor declares war for Asia Minor, Suleiman ibn Qutulmish 'helps' if he's alive (he should be)
 seljuk_invasion_events.0003 = {
-	title = "Help arrives!" # seljuk_invasion_events.
-	desc = "This guy" # seljuk_invasion_events.
+	title = seljuk_invasion_events.0003.title
+	desc = seljuk_invasion_events.0003.desc
 	theme = war
 	
 	# Left portrait is Seljuk Emperor, right portrait is Suleiman
@@ -83,7 +93,7 @@ seljuk_invasion_events.0003 = {
 	
 	right_portrait = {
 		character = title:e_byzantium.holder # PLACEHOLDER
-		character = personality_bold
+		animation = personality_bold
 	}
 	
 	immediate = {

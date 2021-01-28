@@ -1,4 +1,4 @@
-
+﻿
 # First, this casus belli is the EXACT SAME as the regular 'conquest' casus belli, except 
 # for the event that Alp Arslan/whoever the Seljuk ruler is will get after that.
 # Go to line ~900 for the special CB
@@ -688,10 +688,18 @@ seljuk_armenia_cb = {
 		add_truce_attacker_victory_effect = yes
 		
 		# trigger first of Seljuk Invasion of Asia Minor event chain
-		trigger_event = {
-			id = seljuk_invasion_events.0001
+		title:e_persia.holder = {
+			trigger_event = {
+				id = seljuk_invasion_events.0001
+				
+			}
 		}
-
+		title:e_byzantium.holder = {
+			trigger_event = {
+				id = seljuk_invasion_events.0002
+			}
+		}
+		
 	}
 
 	on_white_peace_desc = {
@@ -875,42 +883,42 @@ seljuk_armenia_cb = {
 
 # A special casus belli that lets the Seljuks invade all of Asia minor.
 # Given to them once they win the initial invasion of Armenia
-# Modelled after Laudibiliter
+# Modelled after Laudibiliter (England conquest of Ireland CB)
 seljuk_invasion_cb = {
 	group = conquest
 
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
-	mutually_exclusive_titles = { always = yes }
+	mutually_exclusive_titles = { always = no } # want to be able to invade all of Asia Minor at once
+	combine_into_one = yes
 
 	allowed_for_character = {
 		exists = scope:attacker.house
 		scope:attacker.house = { 
-			has_house_modifier = seljuk_invasion_modifier #TODO: Create this modifier
+			has_house_modifier = seljuk_invasion_modifier
 		}
 	}
 
-	allowed_against_character = { #TODO: Figure out what this is
-		scope:attacker = {
-			ALL_FALSE = {
-				top_liege = scope:defender.top_liege
-				liege = scope:defender
-			}
+	allowed_against_character = { 
+		scope:defender = {
+			is_landed = yes
+			has_title = title:e_byzantium # only use this CB against the Byzantines
 		}
 	}
 	target_titles = all
-	target_title_tier = all
+	target_title_tier = tier_duchy
 	target_de_jure_regions_above = yes
 	ignore_effect = change_title_holder
 	ai_only_against_neighbors = yes
 
+	# Only duchies that are listed in my custom_asia_minor, which corresponds to where the Seljuks invaded historically.
 	valid_to_start = {
 		scope:target = {
-			tier = tier_empire # changed to empire tier
-			scope:attacker.house = { # make this modifier
-				has_house_modifier = seljuk_invasion_modifier
+			tier = tier_duchy
+			any_in_de_jure_hierarchy = {
+				tier = tier_county
+				title_province = { geographical_region = custom_asia_minor }
 			}
-			title_province = { geographical_region = custom_roman_hibernia } # wrong region
 		}
 	}
 

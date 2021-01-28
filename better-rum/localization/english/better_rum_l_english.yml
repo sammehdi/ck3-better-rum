@@ -1,7 +1,10 @@
 ﻿l_english:
+  # Tooltip of Seljuks being given special CB
+  seljuk_invasion_cb_tooltip:0 "The Seljuks can now invade all of Asia Minor"
+
   # Localization for Seljuks after successfully invading Armenia
   seljuk_invasion_events.0001.title:0 "Victory in Armenia!"
-  seljuk_invasion_events.0001.desc:0 "Having defeated the Byzantines in battle, we have established our control over Armenia. Once we recoup our forces, we shall take over the rest of Asia Minor!"
+  seljuk_invasion_events.0001.desc:0 "Having defeated the Byzantines in battle, we have established our control over Armenia. We must soon decide what to do with the native Apostolic population. Shall we usher in the guiding light of Allah in Armenia, or should we respect their religious freedoms?\n\nThe Byzantines, meanwhile, are more exposed than ever. Their Anatolian heartland is ripe for the taking. Once we recoup our forces, we shall take over the rest of Asia Minor!"
   seljuk_invasion_events.0001.a:0 "Onwards!"
 
   # Localization for Byzantines after failing to defend Armenia
@@ -10,6 +13,6 @@
   seljuk_invasion_events.0002.a:0 "This is a disaster!"
 
   # Localization for event in which Seljuk Emperor gets help from Suleyman ibn Qutulmish
-  seljuk_invasion_events.0003.title:0 "Even More Help?""
-  seljuk_invasion_events.0003.desc:0 "Even though I did not ask, Suleyman ibn Qutulmish, a distant relation of mine, insists on aiding me in my conquest of Asia Minor. Doubtless, facing such an overwhelming force, the Greeks have no chance."
-  seljuk_invasion_events.0002.a:0 "I'll be keeping an eye on him."
+  seljuk_invasion_events.0003.title:0 "Overkill"
+  seljuk_invasion_events.0003.desc:0 "Even though I did not ask, Suleyman ibn Qutulmish, a distant relation of mine, insists on aiding me in my conquest of Asia Minor. Doubtless, facing such an overwhelming force, the Greeks have no chance. Though Suleyman's motives are questionable."
+  seljuk_invasion_events.0003.a:0 "I'll be keeping an eye on him."

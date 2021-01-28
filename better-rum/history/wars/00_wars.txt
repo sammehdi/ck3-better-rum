@@ -1,4 +1,4 @@
-# Harald's Claim on England
+﻿# Harald's Claim on England
 war = {
 	name = "war_1066_Harald_Invasion"	# the name can be left out, will be generated then
 	start_date = 1066.8.1

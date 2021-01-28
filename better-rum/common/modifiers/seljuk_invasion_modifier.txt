@@ -1,3 +1,3 @@
-seljuk_invasion_modifier = { # Unlocks one-time Seljuk Invasion CB
+﻿seljuk_invasion_modifier = { # Unlocks one-time Seljuk Invasion CB of the rest of Asia Minor
 	icon = prestige_positive
 }
