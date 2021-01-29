@@ -1204,6 +1204,23 @@ seljuk_invasion_cb = {
 
 	on_declaration = {
 		on_declared_war = yes
+		if = {
+			limit = {
+				character:3046 = {
+					is_alive = yes
+					is_landed = yes
+				}
+			}
+			character:3046 = {
+				trigger_event = seljuk_invasion_events.0004
+			}
+			title:e_persia.holder = {
+				trigger_event = seljuk_invasion_events.0003
+			}
+		}
+		title:e_byzantium.holder = {
+			trigger_event = seljuk_invasion_events.0005
+		}
 	}
 
 	# Change this!
@@ -1211,13 +1228,13 @@ seljuk_invasion_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:attacker = { is_local_player = yes } }
-				desc = ireland_laudabiliter_conquest_cb_victory_desc_attacker
+				desc = seljuk_invasion_conquest_cb_victory_desc_attacker
 			}
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = ireland_laudabiliter_conquest_cb_victory_desc_defender
+				desc = seljuk_invasion_conquest_cb_victory_desc_defender
 			}
-			desc = ireland_laudabiliter_conquest_cb_victory_desc
+			desc = seljuk_invasion_conquest_cb_victory_desc
 		}
 	}
 	
@@ -1344,9 +1361,9 @@ seljuk_invasion_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = ireland_laudabiliter_conquest_cb_white_peace_desc_defender
+				desc = seljuk_invasion_conquest_cb_white_peace_desc_defender
 			}
-			desc = ireland_laudabiliter_conquest_cb_white_peace_desc
+			desc = seljuk_invasion_conquest_cb_white_peace_desc
 		}
 	}
 
@@ -1383,7 +1400,7 @@ seljuk_invasion_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = ireland_laudabiliter_conquest_cb_defeat_desc_defender
+				desc = seljuk_invasion_conquest_cb_defeat_desc_defender
 			}
 			triggered_desc = {
 				trigger = {
@@ -1392,9 +1409,9 @@ seljuk_invasion_cb = {
 						has_targeting_faction = yes
 					}
 				}
-				desc = ireland_laudabiliter_conquest_cb_defeat_desc_attacker
+				desc = seljuk_invasion_conquest_cb_defeat_desc_attacker
 			}
-			desc = ireland_laudabiliter_conquest_cb_defeat_desc
+			desc = seljuk_invasion_conquest_cb_defeat_desc
 		}
 	}
 
@@ -1452,9 +1469,9 @@ seljuk_invasion_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "LAUDABILITER_CONQUEST_WAR_NAME"
-	war_name_base = "LAUDABILITER_CONQUEST_WAR_NAME_BASE"
-	cb_name = "LAUDABILITER_CONQUEST_CB_NAME"
+	war_name = "SELJUK_INVASION_CONQUEST_WAR_NAME"
+	war_name_base = "SELJUK_INVASION_CONQUEST_WAR_NAME_BASE"
+	cb_name = "SELJUK_INVASION_CONQUEST_CB_NAME"
 
 	interface_priority = 80
 

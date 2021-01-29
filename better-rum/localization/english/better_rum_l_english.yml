@@ -16,9 +16,29 @@
   seljuk_invasion_events.0003.title:0 "A New Ally"
   seljuk_invasion_events.0003.desc:0 "Even though I did not ask, Suleyman ibn Qutulmish, a distant relation of mine, insists on aiding me in my conquest of Asia Minor. Doubtless, facing such an overwhelming force, the Greeks have no chance. Though Suleyman's motives are questionable."
   seljuk_invasion_events.0003.a:0 "I'll be keeping an eye on him."
-  seljuk_invasion_suleyman_join_tooltip:0 "Suleyman ibn Qutulmish joins the Seljuk Invasion of Asia Minor"
+  seljuk_invasion_suleyman_join_tooltip:0 "Suleyman ibn Qutulmish joins the Seljuk Invasion of Asia Minor, having raised 10,000 additional soldiers"
 
   # Localization for event in which Seljuk Emperor gets help from Suleyman ibn Qutulmish (Suleyman's event)
   seljuk_invasion_events.0004.title:0 "An Opportunity"
-  seljuk_invasion_events.0004.desc:0 "With the Emperor invading Asia Minor, I decided that I must join him. This is an excellent opportunity for me to expand my power base."
-  seljuk_invasion_events.0004.a:0 "Onwards!"
+  seljuk_invasion_events.0004.desc:0 "With the Emperor invading Asia Minor, I decided that I must join him. This is an excellent opportunity for me to expand my power base, especially with my ever growing host at my back."
+  seljuk_invasion_events.0004.a:0 "For glory!"
+
+  # Localization for event in which Byzantines are notified of new war
+  seljuk_invasion_events.0005.title:0 "Renewed Seljuk Invasion"
+  seljuk_invasion_events.0005.desc:0 "If their conquest of Armenia hadn't already weakened us enough, the Turks now seek to control all of Asia Minor! They have raised tens of thousands of soldiers to conquer the entire region from us. We shall not surrender so easily this time, given the stakes, but I fear for the worst. What is one to do in the face of such an overwhelming force?"
+  seljuk_invasion_events.0005.a:0 "Call our allies, now!"
+
+  # Localization for Seljuk Invasion CBs (copied and pasted from Laudibiliter and modified)
+  seljuk_invasion_conquest_cb:0 "Seljuk Invasion"
+  SELJUK_INVASION_CONQUEST_CB_NAME:1 "Invade Asia Minor"
+  SELJUK_INVASION_CONQUEST_CB_SPECIFIC_NAME:1 "Invade Asia Minor"
+  SELJUK_INVASION_CONQUEST_WAR_NAME:1 "Seljuk Invasion of Asia Minor"
+  SELJUK_INVASION_CONQUEST_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+  seljuk_invasion_conquest_cb_victory_desc_attacker:0 "You take all titles [defender.GetShortUIName] holds in Asia Minor."
+  seljuk_invasion_conquest_cb_victory_desc_defender:0 "[attacker.GetShortUIName|U] takes all titles you hold in Asia Minor."
+  seljuk_invasion_conquest_cb_victory_desc:0 "[attacker.GetShortUIName|U] takes all titles [defender.GetShortUIName] holds in Asia Minor."
+  seljuk_invasion_conquest_cb_white_peace_desc_defender:0 "You keep all contested titles."
+  seljuk_invasion_conquest_cb_white_peace_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."
+  seljuk_invasion_conquest_cb_defeat_desc_defender:0 "You keep all contested titles."
+  seljuk_invasion_conquest_cb_defeat_desc_attacker:0 "[defender.GetShortUIName|U] keeps all contested titles. All [factions|E] against you increase their [discontent|E]."
+  seljuk_invasion_conquest_cb_defeat_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."

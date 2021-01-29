@@ -110,22 +110,57 @@ seljuk_invasion_events.0003 = {
 		custom_tooltip = seljuk_invasion_suleyman_join_tooltip
 		hidden_effect = {
 			# Go through Seljuk Emperor's wars
-			every_primary_war_enemy = {
-				if = {
-					limit = {
-						title:e_byzantium.holder = scope:defender
-					}
-					add_attacker = character:3046
-					# spawn more troops for 3046 too
-					character:3046 = {
-						name = event_troop_default_name
-						levies = 9000
-						men_at_arms = {
-							type = horse_archers
-							men = 2000
+			title:e_persia.holder = {
+				every_character_war = {
+					# If the war is against Byzantium, have Suleiman join that war
+					if = {
+						limit = {
+						primary_defender = title:e_byzantium.holder
 						}
-						location = 4893
-						origin = 4893
+						add_attacker = character:3046
+						# spawn more troops for Suleyman too (10,000! Not historically accurate, just for balance between Seljuk and Rum)
+						character:3046 = {
+							spawn_army = {
+								name = event_troop_default_name
+								levies = 2000
+								men_at_arms = {
+									type = horse_archers
+									men = 500
+								}
+								location = 4893
+								origin = 4893
+							}
+							spawn_army = {
+								name = event_troop_default_name
+								levies = 2000
+								men_at_arms = {
+									type = horse_archers
+									men = 500
+								}
+								location = 4893
+								origin = 4893
+							}
+							spawn_army = {
+								name = event_troop_default_name
+								levies = 2000
+								men_at_arms = {
+									type = horse_archers
+									men = 500
+								}
+								location = 4893
+								origin = 4893
+							}
+							spawn_army = {
+								name = event_troop_default_name
+								levies = 2000
+								men_at_arms = {
+									type = horse_archers
+									men = 500
+								}
+								location = 4893
+								origin = 4893
+							}
+						}
 					}
 				}
 			}
@@ -150,8 +185,8 @@ seljuk_invasion_events.0004 = {
 		}
 	}
 	
-	title = seljuk_invasion_events.0003.title
-	desc = seljuk_invasion_events.0003.desc
+	title = seljuk_invasion_events.0004.title
+	desc = seljuk_invasion_events.0004.desc
 	theme = war
 	
 	# Left portrait is Seljuk Emperor, right portrait is Suleiman
@@ -172,6 +207,32 @@ seljuk_invasion_events.0004 = {
 	
 	option = {
 		name = seljuk_invasion_events.0004.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Byzantine Emperor is notified of new Seljuk invasion of all of Asia Minor
+seljuk_invasion_events.0005 = {	
+	title = seljuk_invasion_events.0005.title
+	desc = seljuk_invasion_events.0005.desc
+	theme = war
+	
+	# Left portrait is Byzantine Emperor, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = fear
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = personality_bold
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0005.a
 		
 		ai_chance = {
 			base = 100
