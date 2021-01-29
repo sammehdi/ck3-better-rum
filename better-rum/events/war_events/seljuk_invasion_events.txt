@@ -1,6 +1,7 @@
 ﻿# Upon winning initial war over Armenia, Seljuk Emperor gets event 0001
-# Upon declaring next war for rest of Asia Minor, Seljuk Emperor gets event 0002
-# Upon winning war for Asia Minor, Seljuk Emperor gets event 0003
+# Upon losing initial war over Armenia, Byzantine Emperor gets event 0002
+# Upon declaring war for Asia Minor, Seljuk Emperor gets event 0003
+# Upon Seljuk Emperor's declaration for Asia Minor, Suleyman ibn Qutalmish gets event 0004
 
 namespace = seljuk_invasion_events
 
@@ -24,7 +25,7 @@ seljuk_invasion_events.0001 = {
 	
 	immediate = {
 		# Grant Seljuk Emperor CB to invade most of Asia Minor
-		custom_tooltip = seljuk_invasion_cb_tooltip
+		custom_tooltip = seljuk_invasion_cb_gain_tooltip
 		hidden_effect = {
 			house = {
 				add_house_modifier = {
@@ -65,7 +66,7 @@ seljuk_invasion_events.0002 = {
 	
 	immediate = {
 		# Grant Seljuk Emperor CB to invade most of Asia Minor
-		custom_tooltip = seljuk_invasion_cb_tooltip
+		custom_tooltip = seljuk_invasion_cb_gain_tooltip
 	}
 	
 	# This is bad!
@@ -79,8 +80,16 @@ seljuk_invasion_events.0002 = {
 }
 
 
-# Seljuk Emperor declares war for Asia Minor, Suleiman ibn Qutulmish 'helps' if he's alive (he should be)
+# Seljuk Emperor declares war for Asia Minor, Suleiman ibn Qutulmish 'helps' if he's alive and landed (he should be)
 seljuk_invasion_events.0003 = {
+	# Suleiman must be alive
+	trigger = {
+		character:3046 = {
+			is_alive = yes
+			is_landed = yes
+		}
+	}
+
 	title = seljuk_invasion_events.0003.title
 	desc = seljuk_invasion_events.0003.desc
 	theme = war
@@ -92,17 +101,77 @@ seljuk_invasion_events.0003 = {
 	}
 	
 	right_portrait = {
-		character = title:e_byzantium.holder # PLACEHOLDER
+		character = character:3046 # Suleiman
 		animation = personality_bold
 	}
 	
 	immediate = {
 		# Suleiman joins war as attacker
-		# add_attacker
+		custom_tooltip = seljuk_invasion_suleyman_join_tooltip
+		hidden_effect = {
+			# Go through Seljuk Emperor's wars
+			every_primary_war_enemy = {
+				if = {
+					limit = {
+						title:e_byzantium.holder = scope:defender
+					}
+					add_attacker = character:3046
+					# spawn more troops for 3046 too
+					character:3046 = {
+						name = event_troop_default_name
+						levies = 9000
+						men_at_arms = {
+							type = horse_archers
+							men = 2000
+						}
+						location = 4893
+						origin = 4893
+					}
+				}
+			}
+		}
 	}
 	
 	option = {
 		name = seljuk_invasion_events.0003.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Seljuk Emperor declares war for Asia Minor, Suleiman ibn Qutulmish 'helps' if he's alive (Suleiman's event)
+seljuk_invasion_events.0004 = {
+	trigger = {
+		character:3046 = {
+			is_alive = yes
+			is_landed = yes
+		}
+	}
+	
+	title = seljuk_invasion_events.0003.title
+	desc = seljuk_invasion_events.0003.desc
+	theme = war
+	
+	# Left portrait is Seljuk Emperor, right portrait is Suleiman
+	left_portrait = {
+		character = title:e_persia.holder
+		animation = dismissal
+	}
+	
+	right_portrait = {
+		character = character:3046
+		animation = personality_dishonorable
+	}
+	
+	immediate = {
+		# Suleiman joins war as attacker
+		custom_tooltip = seljuk_invasion_suleyman_join_tooltip
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0004.a
 		
 		ai_chance = {
 			base = 100

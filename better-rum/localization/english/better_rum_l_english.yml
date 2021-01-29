@@ -1,6 +1,6 @@
 ﻿l_english:
   # Tooltip of Seljuks being given special CB
-  seljuk_invasion_cb_tooltip:0 "The Seljuks can now invade all of Asia Minor"
+  seljuk_invasion_cb_gain_tooltip:0 "The Seljuks can now invade all of Asia Minor"
 
   # Localization for Seljuks after successfully invading Armenia
   seljuk_invasion_events.0001.title:0 "Victory in Armenia!"
@@ -13,6 +13,12 @@
   seljuk_invasion_events.0002.a:0 "This is a disaster!"
 
   # Localization for event in which Seljuk Emperor gets help from Suleyman ibn Qutulmish
-  seljuk_invasion_events.0003.title:0 "Overkill"
+  seljuk_invasion_events.0003.title:0 "A New Ally"
   seljuk_invasion_events.0003.desc:0 "Even though I did not ask, Suleyman ibn Qutulmish, a distant relation of mine, insists on aiding me in my conquest of Asia Minor. Doubtless, facing such an overwhelming force, the Greeks have no chance. Though Suleyman's motives are questionable."
   seljuk_invasion_events.0003.a:0 "I'll be keeping an eye on him."
+  seljuk_invasion_suleyman_join_tooltip:0 "Suleyman ibn Qutulmish joins the Seljuk Invasion of Asia Minor"
+
+  # Localization for event in which Seljuk Emperor gets help from Suleyman ibn Qutulmish (Suleyman's event)
+  seljuk_invasion_events.0004.title:0 "An Opportunity"
+  seljuk_invasion_events.0004.desc:0 "With the Emperor invading Asia Minor, I decided that I must join him. This is an excellent opportunity for me to expand my power base."
+  seljuk_invasion_events.0004.a:0 "Onwards!"

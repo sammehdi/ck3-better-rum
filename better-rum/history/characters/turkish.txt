@@ -2700,6 +2700,17 @@
 	1039.1.2 = {
 		birth = "1039.1.2"
 	}
+	# Spawn in some levies for him so that he doesn't immediately lose
+	1066.9.14 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1200
+				location = 4893
+				origin = 4893
+			}
+		}
+	}
 	1086.1.1 = {
 		death = "1086.1.1"
 	}
@@ -2724,17 +2735,22 @@
 	}
 }
 
+# Son of Suleyman ibn Qutulmish. 
 41701 = {
 	name = "Kilij_Arslan"
 	# AKA: Kilij Arslan
 	dynasty = 613
-	martial = 5
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
+	martial = 10
+	diplomacy = 9
+	intrigue = 10
+	stewardship = 9
 	religion = "ashari"
 	culture = "turkish"
-	trait = education_martial_2
+	trait = arrogant
+	trait = deceitful
+	trait = brave
+	trait = cynical
+	trait = education_martial_4
 	father = 3046
 	1058.1.2 = {
 		birth = "1058.1.2"
