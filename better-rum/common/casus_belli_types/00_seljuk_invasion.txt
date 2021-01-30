@@ -906,7 +906,7 @@ seljuk_invasion_cb = {
 		}
 	}
 	target_titles = all
-	target_title_tier = tier_duchy
+	target_title_tier = tier_county
 	target_de_jure_regions_above = yes
 	ignore_effect = change_title_holder
 	ai_only_against_neighbors = yes
@@ -914,10 +914,10 @@ seljuk_invasion_cb = {
 	# Only duchies that are listed in my custom_asia_minor, which corresponds to where the Seljuks invaded historically.
 	valid_to_start = {
 		scope:target = {
-			tier = tier_duchy
+			tier = tier_county
 			any_in_de_jure_hierarchy = {
 				tier = tier_county
-				title_province = { geographical_region = custom_asia_minor }
+				title_province = { geographical_region = custom_rum }
 			}
 		}
 	}
@@ -1223,7 +1223,6 @@ seljuk_invasion_cb = {
 		}
 	}
 
-	# Change this!
 	on_victory_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -1326,14 +1325,59 @@ seljuk_invasion_cb = {
 			}
 		}
 
+		
+
 		resolve_title_and_vassal_change = scope:change
 
-		# Prestige Progress for the Attacker
-		every_in_list = {
-			list = target_titles
-			scope:attacker = {
-				add_prestige_experience = minor_prestige_value
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = steal
+			add_claim_on_loss = no
+		}
+
+		# Suleiman steals the titles won from the Seljuk Emperor
+		hidden_effect = {
+			if = {
+				limit = {
+					character:3046 = {
+						is_alive = yes
+					}
+				}
+			
+				every_in_list = {
+					list = titles_taken
+					change_title_holder = {
+						holder = character:3046
+						change = scope:steal
+						take_baronies = yes
+					}
+				}
+				
+				title:k_rum = {
+					change_title_holder = {
+						holder = character:3046
+						change = scope:steal
+					}
+					set_can_be_named_after_dynasty = no
+				}
+				character:3046 = {
+					add_prestige = massive_prestige_gain
+				}
+				title:e_persia.holder = {
+					set_relation_nemesis = character:3046
+					every_heir = {
+						set_relation_rival = character:3046
+					}
+					add_pressed_claim = title:k_rum
+				}
 			}
+		}
+		
+		resolve_title_and_vassal_change = scope:steal
+
+		# Prestige Progress for the Attacker
+		scope:attacker = {
+			add_prestige_experience = massive_prestige_value
 		}
 
 		# Prestige for the attacker's war allies
@@ -1354,7 +1398,6 @@ seljuk_invasion_cb = {
 
 		# Truce
 		add_truce_attacker_victory_effect = yes
-
 	}
 
 	on_white_peace_desc = {
@@ -1477,7 +1520,12 @@ seljuk_invasion_cb = {
 
 	use_de_jure_wargoal_only = yes
 
-	attacker_wargoal_percentage = 0.8
+	# Modifications to make the war take more effort. Goal of these changes is to make Seljuks focus on occupying much of Asia Minor to get ticking war score
+	attacker_wargoal_percentage = 0.4 # once Seljuks occupy 40% of Asia Minor, they get significant ticking war score
+	attacker_ticking_warscore = 0.4 # default is 0.1
+	attacker_score_from_battles_scale = 30 # default is 40
+	attacker_score_from_occupation_scale = 70 # default is 100
+	
 
 	max_ai_diplo_distance_to_title = 500
 	min_ai_score = 100

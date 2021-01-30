@@ -52,14 +52,26 @@ custom_asia_minor = {
 	duchies = {
 		#Anatolia, exclusing Aegean Islands and Optimatoi. Reference: https://en.wikipedia.org/wiki/File:Byzantium1081ADlightpurple-1-%2BAntioch.png
 		d_ephese d_opsikion d_cilicia d_cibyrrhaeot d_anatolia d_thracesia d_bucellaria d_paphlagonia d_armeniac d_sebasteia d_charsianon d_cappadocia d_chaldia
-		#Armenia
-		d_mesopotamia d_vaspurakan d_greater_armenia 
-		#Georgia
-		d_tao-klarjeti d_abkhazia d_georgia
-		#Azerbaijan
-		d_shirvan
 		#Syria
 		d_antioch
+	}
+}
+
+# Custom Rum. This was where the Sultanate of Rum was established
+custom_rum = {
+	duchies = {
+		# Syria
+		d_antioch
+		# Anatolia
+		d_cilicia d_anatolia d_cappadocia d_charsianon d_armeniac d_bucellaria d_thracesia d_cibyrrhaeot d_ephese d_sebasteia d_paphlagonia
+	
+	}
+	
+	counties = {
+		# Trebizond remained in Byzantine hands, so I'm not adding all of d_chaldia
+		c_satala c_colonea c_cerasus
+		# Same with d_opsikion
+		c_phrygia c_prusa c_mysia 
 	}
 }
 

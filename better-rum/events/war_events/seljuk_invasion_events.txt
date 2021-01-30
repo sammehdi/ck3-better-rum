@@ -129,6 +129,7 @@ seljuk_invasion_events.0003 = {
 								}
 								location = 4893
 								origin = 4893
+								uses_supply = no
 							}
 							spawn_army = {
 								name = event_troop_default_name
@@ -139,6 +140,7 @@ seljuk_invasion_events.0003 = {
 								}
 								location = 4893
 								origin = 4893
+								uses_supply = no
 							}
 							spawn_army = {
 								name = event_troop_default_name
@@ -149,6 +151,7 @@ seljuk_invasion_events.0003 = {
 								}
 								location = 4893
 								origin = 4893
+								uses_supply = no
 							}
 							spawn_army = {
 								name = event_troop_default_name
@@ -159,6 +162,7 @@ seljuk_invasion_events.0003 = {
 								}
 								location = 4893
 								origin = 4893
+								uses_supply = no
 							}
 						}
 					}

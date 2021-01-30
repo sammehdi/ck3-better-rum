@@ -1,0 +1,51 @@
+﻿# Effect for Suleiman to seize newly conquered Asia Minor
+take_rum_scripted_effect = {
+	add_prestige = massive_prestige_gain
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = new_rum
+		add_claim_on_loss = no
+	}
+	title:k_rum = {
+		change_title_holder = {
+			holder = character:3046
+			change = scope:new_rum
+		}
+		set_can_be_named_after_dynasty = no
+	}
+	title:e_persia.holder = {
+		add_prestige = minor_prestige_loss
+		add_opinion = {
+			target = root
+			modifier = pretender_opinion
+		}
+		# Make liege and all his heirs angry
+		set_relation_nemesis = character:3046
+		every_heir = {
+			set_relation_rival = character:3046
+		}
+		
+		# Give all of liege's newly conquered Anatolian provinces to Suleiman
+		every_realm_province = {
+			if = {
+				limit = {
+					AND = {
+						title:e_persia.holder = {
+							has_title = this.county
+						}
+						this.county.title_province = { geographical_region = custom_asia_minor }
+					}
+				}
+				this.county = {
+					change_title_holder = {
+						holder = character:3046
+						change = scope:new_rum
+						take_baronies = yes
+					}
+				}
+			}
+		}
+	}
+	resolve_title_and_vassal_change = scope:new_rum
+	hidden_effect = { set_primary_title_to = title:k_rum }
+}
