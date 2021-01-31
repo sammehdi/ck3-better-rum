@@ -46,3 +46,9 @@
   # Localization for modifier that gives Seljuk Invasion CB
   seljuk_invasion_modifier:0 "Preparing for Invasion"
   seljuk_invasion_modifier_desc:0 "This dynasty is preparing to invade all of Asia Minor!"
+
+  # Turkish immigrants to Rum
+  turkish_immigrants:0 "Turkish Immigrants"
+  turkish_immigrants_desc:0 "As a result of the recent conquest, Turkish immigrants are moving into Asia Minor."
+  STEWARD_PROMOTE_CULTURE_TURKISH_IMMIGRANTS:0 "Turkish Immigrants"
+  COURT_CHAPLAIN_CONVERT_FAITH_TURKISH_IMMIGRANTS:0 "Turkish Immigrants"

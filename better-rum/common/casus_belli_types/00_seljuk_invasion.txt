@@ -1357,6 +1357,16 @@ seljuk_invasion_cb = {
 						change = scope:steal
 						take_baronies = yes
 					}
+					# Also add a 30 year strong modifier to represent Turkish immigration to Asia Minor
+					if = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = turkish_immigrants
+							years = 30
+						}
+					}
 				}
 				
 				title:k_rum = {

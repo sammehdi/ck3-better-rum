@@ -1,0 +1,6 @@
+﻿# Bonuses from having Turkish immigrants come to Asia Minor
+turkish_immigrants = {
+	icon = county_modifier_opinion_positive
+	monthly_county_control_change_add = 0.3
+	development_growth_factor = small_development_growth_gain
+}

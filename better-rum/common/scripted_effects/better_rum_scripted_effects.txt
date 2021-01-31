@@ -1,4 +1,4 @@
-﻿# Sets de jure liege of duchies of k_pontus and k_anatolia to k_rum, and sets de jure liege of k_rum to e_persia
+﻿# Sets de jure liege of duchies of k_pontus, k_anatolia, and k_nikaea to k_rum, and sets de jure liege of k_rum to e_persia
 # Additionally gives all related duchies to character:3046 for ease of vassal management
 de_jure_changes_asia_minor = {
 	create_title_and_vassal_change = {
@@ -21,6 +21,19 @@ de_jure_changes_asia_minor = {
 	}
 	
 	title:k_anatolia = {
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier = tier_duchy
+			}
+			set_de_jure_liege_title = title:k_rum
+			change_title_holder = {
+				holder = character:3046
+				change = scope:rum_duchies
+			}
+		}
+	}
+	
+	title:k_nikaea= {
 		every_in_de_jure_hierarchy = {
 			limit = {
 				tier = tier_duchy

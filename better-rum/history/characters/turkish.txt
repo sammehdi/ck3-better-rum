@@ -2524,32 +2524,24 @@
 				levies = 1700
 				location = 4855
 				origin = 4333
-				uses_supply = no
-				inheritable = yes
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 1700
 				location = 4855
 				origin = 4333
-				uses_supply = no
-				inheritable = yes
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 1700
 				location = 4855
 				origin = 4333
-				uses_supply = no
-				inheritable = yes
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 1700
 				location = 4855
 				origin = 4333
-				uses_supply = no
-				inheritable = yes
 			}
 			
 			spawn_army = {
@@ -2557,29 +2549,24 @@
 				levies = 2000
 				location = 4859
 				origin = 4333
-				uses_supply = no
-				inheritable = yes
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 2000
 				location = 4859
 				origin = 4333
-				uses_supply = no
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 2000
 				location = 4859
 				origin = 4333
-				uses_supply = no
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 2000
 				location = 4859
 				origin = 4333
-				uses_supply = no
 			}
 			
 			spawn_army = {
@@ -2587,14 +2574,12 @@
 				levies = 1410‬
 				location = 4861
 				origin = 4333
-				uses_supply = no
 			}
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 1410
 				location = 4861
 				origin = 4333
-				uses_supply = no
 			}
 		}
 	}
