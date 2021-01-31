@@ -52,3 +52,8 @@ de_jure_changes_asia_minor = {
 		set_de_jure_liege_title = title:e_persia
 	}
 }
+
+# Reverses previous changes (for Byzantines' decision)
+reverse_de_jure_asia_minor = {
+	# Set each duchy's de jure liege to their previous kingdom
+}

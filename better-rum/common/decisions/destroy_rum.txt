@@ -1,0 +1,54 @@
+combine_empires_hre_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	major = yes
+	ai_check_interval = 36 	# every 3 years
+	title = destroy_rum_title
+	desc = destroy_rum_desc
+	selection_tooltip = destroy_rum_tooltip
+	confirm_text = destroy_rum_confirm
+
+	is_shown = {
+		# Must be Byzantium
+		has_primary_title = title:e_byzantium
+		# Rum must exist
+		exists = title:k_rum
+	}
+
+	# Must own a significant part of Asia Minor
+	is_valid = {
+		# Completely controls all of former Nikaea
+		completely_controls = d_bucellaria
+		completely_controls = d_opsikion
+		completely_controls = d_thracesia
+		completely_controls = d_ephese
+		# Completely controls all of Anatolia
+		completely_controls = d_anatolia
+		completely_controls = d_cappadocia
+		completely_controls = d_cibyrrhaeot
+		completely_controls = d_cilicia
+		completely_controls = d_charsianon
+		# Completely controls most of Pontus
+		completely_controls = d_chaldia
+		completely_controls = d_armeniac
+		completely_controls = d_paphlagonia
+		# Completely controls Antioch
+		completely_controls = d_antioch
+	}
+
+	cost = {
+		prestige = 500
+	}
+
+	# Effect restores de jure Kingdoms of Pontus, Anatolia, and Nikaea. "Greek Influx" modifier in owned lands
+	effect = {
+		reverse_de_jure_asia_minor = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
