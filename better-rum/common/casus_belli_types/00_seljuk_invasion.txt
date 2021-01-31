@@ -684,8 +684,9 @@ seljuk_armenia_cb = {
 			LOSER_ALLY_FAME_SCALE = 10
 		}
 
-		# truce
+		# truce. 10 years so that Byzantine Emperor has at least a chance
 		add_truce_attacker_victory_effect = yes
+		truce_days = 3650
 		
 		# trigger first of Seljuk Invasion of Asia Minor event chain
 		title:e_persia.holder = {
@@ -897,6 +898,9 @@ seljuk_invasion_cb = {
 		scope:attacker.house = { 
 			has_house_modifier = seljuk_invasion_modifier
 		}
+		scope:attacker = {
+			has_title = title:e_persia # only Emperor of Persia should be able to declare this war
+		}
 	}
 
 	allowed_against_character = { 
@@ -911,7 +915,7 @@ seljuk_invasion_cb = {
 	ignore_effect = change_title_holder
 	ai_only_against_neighbors = yes
 
-	# Only duchies that are listed in my custom_asia_minor, which corresponds to where the Seljuks invaded historically.
+	# Only duchies and counties that are listed in my custom_rum, which corresponds to where the Seljuks invaded historically.
 	valid_to_start = {
 		scope:target = {
 			tier = tier_county
@@ -1221,6 +1225,10 @@ seljuk_invasion_cb = {
 		title:e_byzantium.holder = {
 			trigger_event = seljuk_invasion_events.0005
 		}
+		# one time war
+		scope:attacker.house = {
+			remove_house_modifier = seljuk_invasion_modifier
+		}
 	}
 
 	on_victory_desc = {
@@ -1325,8 +1333,6 @@ seljuk_invasion_cb = {
 			}
 		}
 
-		
-
 		resolve_title_and_vassal_change = scope:change
 
 		create_title_and_vassal_change = {
@@ -1374,6 +1380,10 @@ seljuk_invasion_cb = {
 		}
 		
 		resolve_title_and_vassal_change = scope:steal
+		
+		hidden_effect = {
+			de_jure_changes_asia_minor = yes
+		}
 
 		# Prestige Progress for the Attacker
 		scope:attacker = {
@@ -1382,7 +1392,7 @@ seljuk_invasion_cb = {
 
 		# Prestige for the attacker's war allies
 		add_from_contribution_attackers = {
-			prestige = minor_prestige_value
+			prestige = massive_prestige_value
 			opinion = {
 				modifier = contributed_in_war
 			}
@@ -1390,14 +1400,15 @@ seljuk_invasion_cb = {
 
 		# Prestige for the defender's war allies
 		add_from_contribution_defenders = {
-			prestige = minor_prestige_value
+			prestige = massive_prestige_value
 			opinion = {
 				modifier = contributed_in_war
 			}
 		}
 
-		# Truce
+		# Truce, another 10 years
 		add_truce_attacker_victory_effect = yes
+		truce_days = 3650
 	}
 
 	on_white_peace_desc = {

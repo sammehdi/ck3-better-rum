@@ -42,3 +42,7 @@
   seljuk_invasion_conquest_cb_defeat_desc_defender:0 "You keep all contested titles."
   seljuk_invasion_conquest_cb_defeat_desc_attacker:0 "[defender.GetShortUIName|U] keeps all contested titles. All [factions|E] against you increase their [discontent|E]."
   seljuk_invasion_conquest_cb_defeat_desc:0 "[defender.GetShortUIName|U] keeps all contested titles."
+
+  # Localization for modifier that gives Seljuk Invasion CB
+  seljuk_invasion_modifier:0 "Preparing for Invasion"
+  seljuk_invasion_modifier_desc:0 "This dynasty is preparing to invade all of Asia Minor!"

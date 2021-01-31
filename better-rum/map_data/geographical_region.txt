@@ -47,16 +47,6 @@
 # > world_steppe_west
 # > world_steppe_east
 
-# Custom Asia Minor for Seljuk Conquest. These were the territories conquered by the Seljuks at the end of the 11th century.
-custom_asia_minor = {
-	duchies = {
-		#Anatolia, exclusing Aegean Islands and Optimatoi. Reference: https://en.wikipedia.org/wiki/File:Byzantium1081ADlightpurple-1-%2BAntioch.png
-		d_ephese d_opsikion d_cilicia d_cibyrrhaeot d_anatolia d_thracesia d_bucellaria d_paphlagonia d_armeniac d_sebasteia d_charsianon d_cappadocia d_chaldia
-		#Syria
-		d_antioch
-	}
-}
-
 # Custom Rum. This was where the Sultanate of Rum was established
 custom_rum = {
 	duchies = {
