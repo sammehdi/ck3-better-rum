@@ -1,4 +1,5 @@
-﻿task_conversion = {
+﻿# About line 500 was changed
+task_conversion = {
 	position = councillor_court_chaplain
 
 	task_type = task_type_county
@@ -498,10 +499,10 @@
 				scope:county = {
 					has_county_modifier = turkish_immigrants
 				}
-				add = {
+			}
+			add = {
 					value = convert_faith_turkish_immigrants_bonus
 					desc = COURT_CHAPLAIN_CONVERT_FAITH_TURKISH_IMMIGRANTS
-				}
 			}
 		}
 		

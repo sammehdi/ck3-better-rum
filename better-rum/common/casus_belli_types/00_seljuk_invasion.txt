@@ -1,5 +1,4 @@
-﻿
-# First, this casus belli is the EXACT SAME as the regular 'conquest' casus belli, except 
+﻿# First, this casus belli is the EXACT SAME as the regular 'conquest' casus belli, except 
 # for the event that Alp Arslan/whoever the Seljuk ruler is will get after that.
 # Go to line ~900 for the special CB
 seljuk_armenia_cb = {
@@ -683,21 +682,44 @@ seljuk_armenia_cb = {
 			WINNER_ALLY_FAME_SCALE = 10
 			LOSER_ALLY_FAME_SCALE = 10
 		}
-
-		# truce. 10 years so that Byzantine Emperor has at least a chance
-		add_truce_attacker_victory_effect = yes
-		truce_days = 3650
 		
-		# trigger first of Seljuk Invasion of Asia Minor event chain
-		title:e_persia.holder = {
-			trigger_event = {
-				id = seljuk_invasion_events.0001
-				
+		scope:attacker = {
+			# Add 10 year truce with Byzantine Emperor
+			add_truce_one_way = {
+				character = scope:defender
+				years = 10
+				result = victory
+				war = root.war
 			}
 		}
-		title:e_byzantium.holder = {
-			trigger_event = {
-				id = seljuk_invasion_events.0002
+		
+		scope:attacker = {
+			# And a 10 year truce with his heir
+			add_truce_one_way = {
+				character = scope:defender.primary_heir
+				years = 10
+				result = victory
+				war = root.war
+			}
+		}
+		
+		# trigger first of Seljuk Invasion of Asia Minor event chain
+		if = {
+			limit = {
+				scope:attacker = {
+					has_title = title:e_persia
+				}
+			}
+			title:e_persia.holder = {
+				trigger_event = {
+					id = seljuk_invasion_events.0001
+					
+				}
+			}
+			title:e_byzantium.holder = {
+				trigger_event = {
+					id = seljuk_invasion_events.0002
+				}
 			}
 		}
 		
@@ -1392,6 +1414,10 @@ seljuk_invasion_cb = {
 		resolve_title_and_vassal_change = scope:steal
 		
 		hidden_effect = {
+			# Set Suleiman's capital to somewhere more reasonable
+			title:k_rum.holder = {
+				set_realm_capital = title:d_anatolia.title_capital_county
+			}
 			de_jure_changes_asia_minor = yes
 		}
 
@@ -1416,9 +1442,8 @@ seljuk_invasion_cb = {
 			}
 		}
 
-		# Truce, another 10 years
+		# Truce
 		add_truce_attacker_victory_effect = yes
-		truce_days = 3650
 	}
 
 	on_white_peace_desc = {

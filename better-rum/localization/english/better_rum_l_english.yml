@@ -54,6 +54,7 @@
   COURT_CHAPLAIN_CONVERT_FAITH_TURKISH_IMMIGRANTS:0 "Turkish Immigrants"
 
   # Destroy Rum decision (for Byzantines)
+  custom_rum:0 "Rum"
   destroy_rum_title:0 "Destroy Rum"
   destroy_rum_desc:0 "For too long have the Seljuks occupied our Anatolian heartlands. With our recent victories against the Turks, it is finally time to restore rightful Greek rule over Asia Minor!"
   destroy_rum_tooltip:0 "The time has come for the world to acknowledge our rightful rule to Asia Minor."

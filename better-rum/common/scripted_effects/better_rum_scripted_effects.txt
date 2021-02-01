@@ -56,4 +56,53 @@ de_jure_changes_asia_minor = {
 # Reverses previous changes (for Byzantines' decision)
 reverse_de_jure_asia_minor = {
 	# Set each duchy's de jure liege to their previous kingdom
+	# k_nikaea
+	title:d_optimatoi = {
+		set_de_jure_liege_title = title:k_nikaea
+	}
+	title:d_opsikion = {
+		set_de_jure_liege_title = title:k_nikaea
+	}
+	title:d_ephese = {
+		set_de_jure_liege_title = title:k_nikaea
+	}
+	title:d_thracesia = {
+		set_de_jure_liege_title = title:k_nikaea
+	}
+	title:d_bucellaria = {
+		set_de_jure_liege_title = title:k_nikaea
+	}
+	
+	# k_anatolia
+	title:d_cibyrrhaeot = {
+		set_de_jure_liege_title = title:k_anatolia
+	}
+	title:d_anatolia = {
+		set_de_jure_liege_title = title:k_anatolia
+	}
+	title:d_cappadocia = {
+		set_de_jure_liege_title = title:k_anatolia
+	}
+	title:d_charsianon = {
+		set_de_jure_liege_title = title:k_anatolia
+	}
+	title:d_cilicia = {
+		set_de_jure_liege_title = title:k_anatolia
+	}
+	
+	# k_pontus
+	title:d_sebasteia = {
+		set_de_jure_liege_title = title:k_pontus
+	}
+	title:d_armeniac = {
+		set_de_jure_liege_title = title:k_pontus
+	}
+	title:d_paphlagonia = {
+		set_de_jure_liege_title = title:k_pontus
+	}
+	title:d_chaldia = {
+		set_de_jure_liege_title = title:k_pontus
+	}
+	
+	destroy_title = title:k_rum
 }
