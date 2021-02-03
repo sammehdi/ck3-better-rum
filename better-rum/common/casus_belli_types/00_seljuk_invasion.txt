@@ -695,11 +695,16 @@ seljuk_armenia_cb = {
 		
 		scope:attacker = {
 			# And a 10 year truce with his heir
-			add_truce_one_way = {
-				character = scope:defender.primary_heir
-				years = 10
-				result = victory
-				war = root.war
+			if = {
+				limit = {
+					exists = scope:defender.primary_heir
+				}
+				add_truce_one_way = {
+					character = scope:defender.primary_heir
+					years = 10
+					result = victory
+					war = root.war
+				}
 			}
 		}
 		
@@ -713,7 +718,15 @@ seljuk_armenia_cb = {
 			title:e_persia.holder = {
 				trigger_event = {
 					id = seljuk_invasion_events.0001
-					
+				}
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					trigger_event = {
+						id = seljuk_invasion_events.1000
+						years = 10
+					}
 				}
 			}
 			title:e_byzantium.holder = {
@@ -899,6 +912,7 @@ seljuk_armenia_cb = {
 	should_show_war_goal_subview = yes
 
 	attacker_wargoal_percentage = 0.8
+	max_attacker_score_from_battles = 75 # AI focuses a lot more on battles, so this will help finish the war more quickly
 
 	max_ai_diplo_distance_to_title = 1000
 	min_ai_score = 100
@@ -932,7 +946,7 @@ seljuk_invasion_cb = {
 		}
 	}
 	target_titles = all
-	target_title_tier = tier_county
+	target_title_tier = tier_empire
 	target_de_jure_regions_above = yes
 	ignore_effect = change_title_holder
 	ai_only_against_neighbors = yes
@@ -1415,10 +1429,24 @@ seljuk_invasion_cb = {
 		
 		hidden_effect = {
 			# Set Suleiman's capital to somewhere more reasonable
-			title:k_rum.holder = {
-				set_realm_capital = title:d_anatolia.title_capital_county
+			if = {
+				limit = {
+					exists = title:k_rum
+				}
+				title:k_rum.holder = {
+					set_realm_capital = title:d_anatolia.title_capital_county
+				}
+				# Eat kingdoms into Rum
+				de_jure_changes_asia_minor = yes
+				
+				# Finally, trigger events
+				title:e_persia.holder = {
+					trigger_event = seljuk_invasion_events.0006
+				}
+				title:k_rum.holder = {
+					trigger_event = seljuk_invasion_events.0007
+				}
 			}
-			de_jure_changes_asia_minor = yes
 		}
 
 		# Prestige Progress for the Attacker
@@ -1567,7 +1595,7 @@ seljuk_invasion_cb = {
 	use_de_jure_wargoal_only = yes
 
 	# Modifications to make the war take more effort. Goal of these changes is to make Seljuks focus on occupying much of Asia Minor to get ticking war score
-	attacker_wargoal_percentage = 0.4 # once Seljuks occupy 40% of Asia Minor, they get significant ticking war score
+	attacker_wargoal_percentage = 0.3 # once Seljuks occupy 30% of Asia Minor (and that's a lot, trust me), they get significant ticking war score
 	attacker_ticking_warscore = 0.4 # default is 0.1
 	attacker_score_from_battles_scale = 30 # default is 40
 	attacker_score_from_occupation_scale = 70 # default is 100

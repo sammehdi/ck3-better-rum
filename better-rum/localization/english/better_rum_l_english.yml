@@ -28,6 +28,22 @@
   seljuk_invasion_events.0005.desc:0 "If their conquest of Armenia hadn't already weakened us enough, the Turks now seek to control all of Asia Minor! They have raised tens of thousands of soldiers to conquer the entire region from us. We shall not surrender so easily this time, given the stakes, but I fear for the worst. What is one to do in the face of such an overwhelming force?"
   seljuk_invasion_events.0005.a:0 "Call our allies, now!"
 
+  # Localization for event in which Seljuk Emperor is notified of Suleiman's takeover of Rum
+  seljuk_invasion_events.0006.title:0 "Betrayal!"
+  seljuk_invasion_events.0006.desc:0 "My former ally in the war against the Byzantines, Suleyman ibn Qutulmish, has betrayed our agreements and established himself as Sultan of Rum! I cannot even begin to describe how enraged I am at his treachery.\n\nStill, my vassals recognize how unjust Suleyman has been, and they have assured me that I have every right to depose him at once. This betrayal will not be forgotten!"
+  seljuk_invasion_events.0006.a:0 "His time will come."
+  seljuk_invasion_suleyman_steal_tooltip:0 "Suleyman ibn Qutulmish takes control of all of Rum"
+
+  # Localization for event in which Suleiman is notified of his own takeover of Rum
+  seljuk_invasion_events.0007.title:0 "A Stunning Success!"
+  seljuk_invasion_events.0007.desc:0 "Before the Seljuk Emperor could move his forces into Asia Minor to take over control from the Byzantines, I have established myself in the area so that it is under my own direct control. He must be furious, and I should expect a reprisal soon. I must prepare for the coming conflict."
+  seljuk_invasion_events.0007.a:0 "Victory!"
+
+  # "Localization" for event in which AI is forced to declare war on Byzantines (hidden from player)
+  seljuk_invasion_events.1000.title:0 "War!"
+  seljuk_invasion_events.1000.desc:0 "Byzantium bad!"
+  seljuk_invasion_events.1000.a:0 "Yes!"
+
   # Localization for Seljuk Invasion CBs (copied and pasted from Laudibiliter and modified)
   seljuk_invasion_conquest_cb:0 "Seljuk Invasion"
   SELJUK_INVASION_CONQUEST_CB_NAME:1 "Invade Asia Minor"

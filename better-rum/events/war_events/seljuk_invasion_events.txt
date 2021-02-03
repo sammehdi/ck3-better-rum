@@ -2,6 +2,9 @@
 # Upon losing initial war over Armenia, Byzantine Emperor gets event 0002
 # Upon declaring war for Asia Minor, Seljuk Emperor gets event 0003
 # Upon Seljuk Emperor's declaration for Asia Minor, Suleyman ibn Qutalmish gets event 0004
+# Upon Seljuk Emperor's declaration for Asia Minor, Byzantine Emperor gets event 0005
+# Upon Suleiman taking all of Rum, Seljuk Emperor gets event 0006
+# Upon Suleiman taking all of Rum, Suleiman gets event 0007
 
 namespace = seljuk_invasion_events
 
@@ -237,6 +240,134 @@ seljuk_invasion_events.0005 = {
 	
 	option = {
 		name = seljuk_invasion_events.0005.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Seljuk Emperor is notified of Suleiman's takeover of Rum
+seljuk_invasion_events.0006 = {
+	title = seljuk_invasion_events.0006.title
+	desc = seljuk_invasion_events.0006.desc
+	theme = war
+	
+	# Left portrait is Suleiman, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:k_rum.holder
+		animation = personality_dishonorable
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = rage
+	}
+	
+	immediate = {
+		custom_tooltip = seljuk_invasion_suleyman_steal_tooltip
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0006.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Suleiman gets this event when he takes over Rum
+seljuk_invasion_events.0007 = {
+	title = seljuk_invasion_events.0007.title
+	desc = seljuk_invasion_events.0007.desc
+	theme = war
+	
+	# Left portrait is Suleiman, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:k_rum.holder
+		animation = personality_dishonorable
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = rage
+	}
+	
+	immediate = {
+		custom_tooltip = seljuk_invasion_suleyman_steal_tooltip
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0007.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# An event that forces the AI to go to war with the Byzantines because it won't on its own
+seljuk_invasion_events.1000 = {
+	title = seljuk_invasion_events.1000.title
+	desc = seljuk_invasion_events.1000.desc
+	theme = war
+	
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = fear
+	}
+	
+	right_portrait = {
+		character = title:e_persia.holder
+		animation = personality_bold
+	}
+	
+	# + AI gets 7500 troops
+	immediate = {
+		title:e_persia.holder = {
+			cancel_truce_both_ways = title:e_byzantium.holder
+			start_war = {
+				casus_belli = seljuk_invasion_cb
+				target = title:e_byzantium.holder
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				men_at_arms = {
+					type = horse_archers
+					men = 500
+				}
+				location = 4893
+				origin = 4893
+				uses_supply = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				men_at_arms = {
+					type = horse_archers
+					men = 500
+				}
+				location = 4893
+				origin = 4893
+				uses_supply = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				men_at_arms = {
+					type = horse_archers
+					men = 500
+				}
+				location = 4893
+				origin = 4893
+				uses_supply = no
+			}
+		}
+	}
+	option = {
+		name = seljuk_invasion_events.1000.a
 		
 		ai_chance = {
 			base = 100
