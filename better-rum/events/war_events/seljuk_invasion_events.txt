@@ -308,6 +308,7 @@ seljuk_invasion_events.0007 = {
 }
 
 # An event that forces the AI to go to war with the Byzantines because it won't on its own
+# AI also needs a lot of buffs to do well...
 seljuk_invasion_events.1000 = {
 	title = seljuk_invasion_events.1000.title
 	desc = seljuk_invasion_events.1000.desc
@@ -330,6 +331,61 @@ seljuk_invasion_events.1000 = {
 			start_war = {
 				casus_belli = seljuk_invasion_cb
 				target = title:e_byzantium.holder
+				
+				# Really crappy programming, don't know if there's a better way to do this...
+				# Counties from k_anatolia
+				target_title = c_cilicia
+				target_title = c_seleucia
+				target_title = c_lycandus
+				target_title = c_tall_hamid
+				target_title = c_lycia
+				target_title = c_caria
+				target_title = c_pamphylia
+				target_title = c_lycaonia
+				target_title = c_pacatiana
+				target_title = c_pisidia
+				target_title = c_selge
+				target_title = c_galatia_salutaris
+				target_title = c_philomelium
+				target_title = c_isauria
+				target_title = c_cappadocia
+				target_title = c_lower_galatia
+				# Counties from k_nikaea
+				target_title = c_mysia
+				target_title = c_prusa
+				target_title = c_phrygia
+				target_title = c_ionia
+				target_title = c_aeolis
+				target_title = c_lydia
+				# target_title = c_thyatira # Intentionally excluded
+				target_title = c_hadrianeia
+				target_title = c_chonae
+				# target_title = c_bithynia # Bithynia intentionally not included
+				target_title = c_tarsos
+				target_title = c_honorias
+				target_title = c_galatia
+				target_title = c_hadrianopolis
+				# Counties from k_pontus
+				target_title = c_paphlagonia
+				target_title = c_pompeiopolis
+				target_title = c_helenopontus
+				target_title = c_sinope
+				target_title = c_euchaita
+				target_title = c_zela
+				target_title = c_sebasteia
+				target_title = c_azysia
+				target_title = c_ablastha
+				target_title = c_charsianon
+				target_title = c_kaisereia
+				target_title = c_kyzistra
+				target_title = c_cerasus
+				# target_title = c_trebizond # Trebizond intentionally not included
+				target_title = c_colonea
+				target_title = c_satala
+				
+				# Don't forget Antioch
+				target_title = c_antiocheia
+				target_title = c_alexandretta
 			}
 			spawn_army = {
 				name = event_troop_default_name
@@ -357,13 +413,26 @@ seljuk_invasion_events.1000 = {
 				name = event_troop_default_name
 				levies = 2000
 				men_at_arms = {
-					type = horse_archers
-					men = 500
+					type = mangonel
+					men = 50
 				}
 				location = 4893
 				origin = 4893
 				uses_supply = no
 			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				men_at_arms = {
+					type = mangonel
+					men = 50
+				}
+				location = 4893
+				origin = 4893
+				uses_supply = no
+			}
+			# AI will also go HEAVILY into debt. Give some gold
+			add_gold = 1000
 		}
 	}
 	option = {

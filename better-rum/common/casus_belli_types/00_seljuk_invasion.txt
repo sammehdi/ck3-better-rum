@@ -725,7 +725,7 @@ seljuk_armenia_cb = {
 					}
 					trigger_event = {
 						id = seljuk_invasion_events.1000
-						years = 10
+						years = 1
 					}
 				}
 			}
@@ -946,7 +946,7 @@ seljuk_invasion_cb = {
 		}
 	}
 	target_titles = all
-	target_title_tier = tier_empire
+	target_title_tier = tier_county
 	target_de_jure_regions_above = yes
 	ignore_effect = change_title_holder
 	ai_only_against_neighbors = yes
@@ -957,7 +957,7 @@ seljuk_invasion_cb = {
 			tier = tier_county
 			any_in_de_jure_hierarchy = {
 				tier = tier_county
-				title_province = { geographical_region = custom_rum }
+				title_capital_county.title_province = { geographical_region = custom_rum }
 			}
 		}
 	}
