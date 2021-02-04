@@ -1,7 +1,7 @@
 ﻿destroy_rum_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
 	major = yes
-	ai_check_interval = 60 	# every 5 years
+	ai_check_interval = 60 	# every 5 years, not that AI will be able to pull this off lol
 	title = destroy_rum_title
 	desc = destroy_rum_desc
 	selection_tooltip = destroy_rum_tooltip
@@ -10,39 +10,26 @@
 	is_shown = {
 		# Must be Byzantium
 		has_primary_title = title:e_byzantium
+		# Can't be Muslim (that'd be awkward)
+		NOT = {
+			religion = religion:islam_religion
+		}
 		# Rum must exist
 		exists = title:k_rum
+		exists = title:k_rum.holder
 	}
 
 	# Must own a significant part of Asia Minor
 	is_valid = {
 		completely_controls_region = custom_rum
-		# Completely controls all of former Nikaea
-		# completely_controls = d_bucellaria
-		# completely_controls = d_opsikion
-		# completely_controls = d_thracesia
-		# completely_controls = d_ephese
-		# Completely controls all of Anatolia
-		# completely_controls = d_anatolia
-		# completely_controls = d_cappadocia
-		# completely_controls = d_cibyrrhaeot
-		# completely_controls = d_cilicia
-		# completely_controls = d_charsianon
-		# Completely controls most of Pontus
-		# completely_controls = d_chaldia
-		# completely_controls = d_armeniac
-		# completely_controls = d_paphlagonia
-		# Completely controls Antioch
-		# completely_controls = d_antioch
 	}
 
-	cost = {
-		prestige = 500
-	}
-
-	# Effect restores de jure Kingdoms of Pontus, Anatolia, and Nikaea. "Greek Influx" modifier in owned lands
+	# Effect restores de jure Kingdoms of Pontus, Anatolia, and Nikaea
 	effect = {
 		reverse_de_jure_asia_minor = yes
+		trigger_event = {
+			id = seljuk_invasion_events.0008
+		}
 	}
 
 	ai_potential = {

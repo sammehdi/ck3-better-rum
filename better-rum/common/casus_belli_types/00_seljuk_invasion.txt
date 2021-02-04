@@ -694,10 +694,13 @@ seljuk_armenia_cb = {
 		}
 		
 		scope:attacker = {
-			# And a 10 year truce with his heir
+			# And a 10 year truce with his heir, since Konstantinos X will usually die quickly
 			if = {
 				limit = {
 					exists = scope:defender.primary_heir
+					scope:defender.primary_heir = {
+						is_landed = yes
+					}
 				}
 				add_truce_one_way = {
 					character = scope:defender.primary_heir
@@ -1401,6 +1404,18 @@ seljuk_invasion_cb = {
 						add_county_modifier = {
 							modifier = turkish_immigrants
 							years = 30
+						}
+						# Just to prevent any stupid uprisings for AI
+						if = {
+							limit = {
+								character:3046 = {
+									is_ai = yes
+								}
+							}
+							add_county_modifier = {
+								modifier = county_increased_opinion_modifier
+								years = 20
+							}
 						}
 					}
 				}

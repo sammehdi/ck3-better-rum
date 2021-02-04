@@ -39,6 +39,13 @@
   seljuk_invasion_events.0007.desc:0 "Before the Seljuk Emperor could move his forces into Asia Minor to take over control from the Byzantines, I have established myself in the area so that it is under my own direct control. He must be furious, and I should expect a reprisal soon. I must prepare for the coming conflict."
   seljuk_invasion_events.0007.a:0 "Victory!"
 
+  # Localization for event in which Byzantine Emperor destroys Rum
+  seljuk_invasion_events.0008.title:0 "Victory At Last"
+  seljuk_invasion_events.0008.desc:0 "With our last conquests in Armenia and Antioch, we have retaken all of our territories stolen from us by the Turks at the end of the 11th century. Today will go down in history as the day on which the Byzantine Empire was reborn!"
+  seljuk_invasion_events.0008.a:0 "The Empire has been restored!"
+  destroy_rum_tooltip:0 "The Kingdom of Rum is destroyed"
+  destroyed_rum_opinion:0 "Reclaimed Asia Minor"
+
   # "Localization" for event in which AI is forced to declare war on Byzantines (hidden from player)
   seljuk_invasion_events.1000.title:0 "War!"
   seljuk_invasion_events.1000.desc:0 "Byzantium bad!"

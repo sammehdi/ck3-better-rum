@@ -296,10 +296,51 @@ seljuk_invasion_events.0007 = {
 	
 	immediate = {
 		custom_tooltip = seljuk_invasion_suleyman_steal_tooltip
+		show_as_tooltip = {
+			title:e_persia.holder = {
+				add_pressed_claim = title:k_rum
+			}
+		}
 	}
 	
 	option = {
 		name = seljuk_invasion_events.0007.a
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+# Destroy Rum!
+seljuk_invasion_events.0008 = {
+	title = seljuk_invasion_events.0008.title
+	desc = seljuk_invasion_events.0008.desc
+	theme = realm
+	
+	# Left portrait is Suleiman, right portrait is Seljuk Emperor
+	left_portrait = {
+		character = title:e_byzantium.holder
+		animation = personality_zealous
+	}
+	
+	immediate = {
+		custom_tooltip = destroy_rum_tooltip
+		# Just going to reuse the "Restore the HRE" effects for this too
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		give_nickname = nick_the_great
+		add_prestige_experience = monumental_fame_gain
+		every_vassal = {
+			add_opinion = {
+				modifier = destroyed_rum_opinion
+				target = root
+			}
+			custom = restore_holy_roman_empire_decision_effects_vassal_opinion.tt
+		}
+	}
+	
+	option = {
+		name = seljuk_invasion_events.0008.a
 		
 		ai_chance = {
 			base = 100
@@ -357,11 +398,11 @@ seljuk_invasion_events.1000 = {
 				target_title = c_ionia
 				target_title = c_aeolis
 				target_title = c_lydia
-				# target_title = c_thyatira # Intentionally excluded
+				target_title = c_thyatira
 				target_title = c_hadrianeia
 				target_title = c_chonae
 				# target_title = c_bithynia # Bithynia intentionally not included
-				target_title = c_tarsos
+				# target_title = c_tarsos # Tarsos also intentionally excluded
 				target_title = c_honorias
 				target_title = c_galatia
 				target_title = c_hadrianopolis

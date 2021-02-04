@@ -2675,13 +2675,12 @@
 # Suleiman ibn Qutulmish, founder of the Sultanate of Rum. Already in the game, buffed him
 3046 = {
 	name = "Suleyman"
-	# dna = TODO: SET DNA
 	dynasty = 613 # Seljuk
-	martial = 15
-	diplomacy = 8
-	intrigue = 14
-	stewardship = 12
-	prowess = 20
+	martial = 10
+	diplomacy = 4
+	intrigue = 10
+	stewardship = 8
+	prowess = 13
 	
 	religion = "ashari"
 	culture = "turkish"
@@ -2750,6 +2749,7 @@
 	trait = deceitful
 	trait = brave
 	trait = cynical
+	trait = rowdy
 	trait = education_martial_4
 	father = 3046
 	1058.1.2 = {
