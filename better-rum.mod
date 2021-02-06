@@ -8,5 +8,7 @@ tags={
 	"Decisions"
 }
 name="Better Rum"
+picture="thumbnail.png"
 supported_version="1.2.2"
 path="C:/Users/samme/OneDrive - University of Southern California/Documents/Paradox Interactive/Crusader Kings III/mod/better-rum"
+remote_file_id="2386400908"

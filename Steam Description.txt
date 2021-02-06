@@ -1,0 +1,58 @@
+[h1]Overview[/h1]
+This mod adds [b]a lot of historical content to Asia Minor![/b] There are new casus belli, events, decisions, modifiers, and characters for you to explore. This mod aims to recreate what took place in Asia Minor at the end of the 11th century in a way that fits into CK3.
+
+[h1]History and Implementation[/h1]
+Following the decisive Battle of Manzikert in 1071, the Seljuks took over nearly all of Asia Minor from the Byzantines. In 1077, Suleiman ibn Qutalmish, the Sultan of Rum, seceded from the Great Seljuk Empire. However, the Sultanate of Rum would soon be re-incorporated into the Empire. Read more [url=https://en.wikipedia.org/wiki/Byzantine%E2%80%93Seljuk_wars#Initial_Conflicts:_1064%E2%80%931071]here![/url]
+
+If we were following history, the war that starts in 1066 between the Byzantines and the Seljuks would be for all of Asia Minor. Nonetheless, that wouldn't make for a very enjoyable mod! I encourage you to play blindly, but if you would like to see a full list of changes, it'll be below all of the recommended character starts.
+
+[h1]Interesting Characters[/h1]
+Here are a few starts for you to check out!
+
+[h2][b]Alp Arslan[/b], Seljuk Emperor[/h2]
+[b]Difficulty: Easy[/b]
+[img]https://steamuserimages-a.akamaihd.net/ugc/1755810548127421590/07559812982AE5B8D086550A1CFDAB278CC9E9B5/[/img]
+The most powerful ruler of his age, Alp Arslan transformed the Seljuk Empire from a Persian regional power into the strongest state the Muslim world had seen since the old Abbasid Caliphate. But his story is far from over. From the declining Byzantine state, Alp Arslan will go on to conquer Armenia and nearly all of Asia Minor. Recreate history and make the world tremble before the Seljuk Empire!
+
+[h2][b]Malik Shah[/b], heir to Alp Arlsan[/h2]
+[b]Difficulty: Easy[/b]
+[img]https://steamuserimages-a.akamaihd.net/ugc/1755810548127422045/42CF7632993CF2899113B1179B041FC2184C1D98/[/img]
+When Alp Arslan died in 1072, Malik Shah succeeded him, though he was only 17. Historically, he was a weaker ruler than his father, with his vizier Nizam al-Mulk wielding nearly absolute power on his behalf. He would expand Seljuk borders into the Caucasus while being a staunch patron of the arts and sciences. Can you build an even greater legacy?
+
+[h2][b]Suleyman ibn Qutalmish[/b], founder of the Sultanate of Rum[/h2]
+[b]Difficulty: Medium[/b]
+[img]https://steamuserimages-a.akamaihd.net/ugc/1755810548127422418/0138DBA15734A5F68FEBB3EE4E7DADBBD3B9D751/[/img]
+Qutalmish, Suleyman's father, had once fought Alp Arslan for the Seljuk throne. As a result, Alp Arslan sought to put an end to both Qutalmish and his four sons. Only Suleyman survived the Seljuk Emperor's aggression. In the process, he distinguished himself as a strong, charismatic leader who would one day establish the independent Sultanate of Rum. Suleyman met an unfortunate end when he was killed by the Seljuk ruler of Syria in 1086. Rewrite his story and create a new Rome!
+
+[h2][b]Basileus Konstantinos X Doukas[/b], Byzantine Emperor[/h2]
+[b]Difficulty: Hard[/b]
+[img]https://steamuserimages-a.akamaihd.net/ugc/1755810548127422818/1FE3444925227F76A8D064AB21324478979CF708/[/img]
+The Byzantine Empire has been declining under the poor leadership of the Doukas dynasty. With Normans invading from the west and Turks from the east, the pressure on the Byzantine Empire had never been greater. Konstantinos had disbanded tens of thousands of militia in the 1060s, leaving the Byzantine Empire incredibly weak. He would die on 22 May 1067, accomplishing very little besides weakening the Empire. Can you overcome previous weak leadership to save the Empire from collapse?
+
+[h2][b]Alexios Komnenos[/b], Doux of Boukellarion[/h2]
+[b]Difficulty: Very Hard[/b]
+[img]https://steamuserimages-a.akamaihd.net/ugc/1755810548127556511/0A66D28DEEEAF663FB0CE2096B2174ADAF00E71E/[/img]
+When Alexios I Komnenos ascended to the throne of the Byzantine Empire in 1081, it was actively collapsing. Rebellion after rebellion, mercenaries deserting, economic stagnation, the Seljuk menace to the East. Still, Alexios would begin the Komnenian Restoration of the Empire, during which a century of wise rule under him and his successors would see the Empire restored and thrive. Can you take your rightful place as Basileus and restore the Empire to its former glory?
+
+[i]When his father dies, Alexios will receive an unpressed claim to the Byzantine Empire.[/i]
+
+[h1]Changelist[/h1]
+[list]
+[*]Buffed many characters who were prominent in the Seljuk Invasion of Asia Minor
+[*]Added event chain for Seljuk Invasion
+[*]Added "Invade Asia Minor" CB for Seljuks to use after they won in Armenia
+[*]Created Sultanate of Rum after Seljuks successfully invade Asia Minor
+[*]Add "Turkish Immigrants" modifier to conquered provinces in Asia Minor to represent historical migrations
+[*]First Crusade will be on average 10 years early because of game mechanics (thanks Paradox)
+[/list]
+These are intentionally rather vague. If you would like to see a very specific changelist, please see my GitHub page for this mod [url=https://github.com/sammehdi/ck3-better-rum]here[/url].
+
+[h1]Localization[/h1]
+This mod is not localized for any language besides English. [b]If you would like to localize the mod, please friend me. Do not upload localized versions of this mod.[/b]
+
+[h1]Closing Note from the Developer[/h1]
+I created this mod because I wanted to see CK3 follow history more closely. In vanilla, the Seljuks usually just break apart after a couple of decades, which is totally ahistorical. Now, you'll see a weak Byzantine Empire that can only be saved by luck or skilled intervention (as what happened historically). 
+
+This sort of historical content is what I greatly enjoy making for CK3. In the future, I'm interested in making mods for the Investiture Controversy, the Fourth Crusade, and, heck, maybe even the Komnenian Restoration (which would go very well with this mod). Still, I am very open to ideas in this category. I've created a discussion in this mod where you can put other historical ideas you have, and maybe I'll implement them!
+
+In any case, I hope you enjoy this mod. Please report any bugs you find in the "bugs" discussion thread. If you enjoy the mod, consider rating it! 

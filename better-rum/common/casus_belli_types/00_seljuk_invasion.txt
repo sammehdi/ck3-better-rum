@@ -949,6 +949,8 @@ seljuk_invasion_cb = {
 	combine_into_one = yes
 
 	allowed_for_character = {
+		# AI can't declare with this, only the player can (AI declares through event)
+		is_ai = no
 		exists = scope:attacker.house
 		scope:attacker.house = { 
 			has_house_modifier = seljuk_invasion_modifier
