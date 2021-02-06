@@ -17,5 +17,6 @@ Check the mod out on Steam [here](https://steamcommunity.com/sharedfiles/filedet
 - Added very strong modifier to simulate Turkish immigration to Asia Minor following the invasion
 - Buffed the following characters: Suleyman ibn Qutalmish, his son Kilij Arslan, Seljuk successor Malik Shah, Alexios Komnenos
 - Set Malik Shah as Seljuk Emperor's designated heir (to follow history)
+- Added a "Destroy Rum" decision for the Byzantine Emperor to take to reverse the De Jure changes caused when Rum was created
 
 That's about it!
