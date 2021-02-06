@@ -1,0 +1,206 @@
+3040 = {
+	name = "Alp_Arslan"
+	dynasty = 613
+	martial = 10
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 7
+	religion = "ashari"
+	culture = "turkish"
+	trait = just
+	trait = diligent
+	trait = brave
+	trait = calm
+	trait = strong
+	trait = education_martial_4
+	father = 3036
+	1029.1.1 = {
+		birth = yes
+	}
+	1054.1.1 = {
+		add_spouse = 3045
+	}
+	1060.1.1 = {
+		effect = {
+			add_gold = 1000
+			add_prestige = 1000
+		}
+		add_pressed_claim = d_armenia
+		add_pressed_claim = d_mesopotamia
+		add_pressed_claim = c_bakriya
+		add_pressed_claim = c_mayyafariqin
+		add_pressed_claim = c_melitene
+		add_pressed_claim = c_tall_basma
+		add_pressed_claim = c_taron
+	}
+	1066.9.14 = {
+		effect = {
+			# Designate Malik Shah as heir, as happened historically
+			set_designated_heir = character:3042
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1700
+				location = 4855
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1700
+				location = 4855
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1700
+				location = 4855
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1700
+				location = 4855
+				origin = 4333
+			}
+			
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				location = 4859
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				location = 4859
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				location = 4859
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 2000
+				location = 4859
+				origin = 4333
+			}
+			
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1410‬
+				location = 4861
+				origin = 4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1410
+				location = 4861
+				origin = 4333
+			}
+		}
+	}
+	1072.11.1 = {
+		death = yes
+	}
+}
+
+# Buffed Malik Shah, since he was both Alp Arslan's historic successor
+# and his feats during his lifetime were indeed quite mighty
+3042 = {
+	name = "Malik_Shah"
+	# AKA: Malik Shah
+	dynasty = 613
+	martial = 11
+	diplomacy = 10
+	intrigue = 5
+	stewardship = 11
+	learning = 15
+	religion = "ashari"
+	culture = "turkish"
+	trait = calm
+	trait = humble
+	trait = temperate
+	trait = pensive
+	disallow_random_traits = yes # for some reason, this line does nothing...
+	father = 3040
+	1055.1.2 = {
+		birth = "1055.1.2"
+	}
+	1092.11.1 = {
+		death = "1092.11.1"
+	}
+}
+
+# Suleiman ibn Qutulmish, founder of the Sultanate of Rum. Already in the game, buffed him
+3046 = {
+	name = "Suleyman"
+	dynasty = 613 # Seljuk
+	martial = 10
+	diplomacy = 4
+	intrigue = 10
+	stewardship = 8
+	prowess = 13
+	
+	religion = "ashari"
+	culture = "turkish"
+	
+	trait = deceitful
+	trait = cynical
+	trait = callous
+	trait = ambitious
+	
+	trait = education_martial_4
+	
+	disallow_random_traits = yes
+	
+	father = 3033 
+
+	1039.1.2 = {
+		birth = "1039.1.2"
+	}
+	# Spawn in some levies for him so that he doesn't immediately lose
+	1066.9.14 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1200
+				location = 4893
+				origin = 4893
+			}
+		}
+	}
+	1086.1.1 = {
+		death = "1086.1.1"
+	}
+}
+
+# Son of Suleyman ibn Qutulmish. 
+41701 = {
+	name = "Kilij_Arslan"
+	# AKA: Kilij Arslan
+	dynasty = 613
+	martial = 10
+	diplomacy = 9
+	intrigue = 10
+	stewardship = 9
+	religion = "ashari"
+	culture = "turkish"
+	trait = arrogant
+	trait = deceitful
+	trait = brave
+	trait = cynical
+	trait = rowdy
+	trait = education_martial_4
+	father = 3046
+	1058.1.2 = {
+		birth = "1058.1.2"
+	}
+	1085.1.1 = {
+		add_spouse = 34263
+	}
+	1107.1.1 = {
+		death = "1107.1.1"
+	}
+}

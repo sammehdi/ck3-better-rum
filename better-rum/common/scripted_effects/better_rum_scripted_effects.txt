@@ -33,30 +33,20 @@ de_jure_changes_asia_minor = {
 		}
 	}
 	
-	title:k_nikaea= {
-		every_in_de_jure_hierarchy = {
-			limit = {
-				tier = tier_duchy
-			}
-			set_de_jure_liege_title = title:k_rum
-			change_title_holder = {
-				holder = character:3046
-				change = scope:rum_duchies
-			}
-		}
-	}
+	# Not doing this for k_nikaea
 	
 	resolve_title_and_vassal_change = scope:rum_duchies
 	
-	title:k_rum = {
-		set_de_jure_liege_title = title:e_persia
-	}
+	# Not changing this de jure either. De Jure is such a weird mechanic, I hate it
+	#title:k_rum = {
+	#	set_de_jure_liege_title = title:e_persia
+	#}
 }
 
 # Reverses previous changes (for Byzantines' decision)
 reverse_de_jure_asia_minor = {
 	# Set each duchy's de jure liege to their previous kingdom
-	# k_nikaea
+	# k_nikaea, doesn't do anything. Kept this from a previous version
 	title:d_optimatoi = {
 		set_de_jure_liege_title = title:k_nikaea
 	}

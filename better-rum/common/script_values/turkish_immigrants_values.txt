@@ -1,5 +1,4 @@
-﻿# Same value as Reclaim Brittania
-promote_culture_turkish_immigrants_bonus = {
+﻿promote_culture_turkish_immigrants_bonus = {
 	value = steward_promote_culture_base_total
 	multiply = 1.0
 }
@@ -8,5 +7,5 @@ promote_culture_turkish_immigrants_bonus = {
 convert_faith_turkish_immigrants_bonus = {
 	value = 0
 	add = court_chaplain_conversion_base_total
-	multiply = 0.25
+	multiply = 1.0
 }

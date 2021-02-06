@@ -369,6 +369,8 @@ seljuk_invasion_events.1000 = {
 	immediate = {
 		title:e_persia.holder = {
 			cancel_truce_both_ways = title:e_byzantium.holder
+			# AI will also go HEAVILY into debt. Give some gold so that they can start the war
+			add_gold = 1500
 			start_war = {
 				casus_belli = seljuk_invasion_cb
 				target = title:e_byzantium.holder
@@ -427,6 +429,9 @@ seljuk_invasion_events.1000 = {
 				# Don't forget Antioch
 				target_title = c_antiocheia
 				target_title = c_alexandretta
+				
+				# And another bit of Syria because Byzantines often conquer this one
+				target_title = c_shayzar
 			}
 			spawn_army = {
 				name = event_troop_default_name
@@ -472,8 +477,7 @@ seljuk_invasion_events.1000 = {
 				origin = 4893
 				uses_supply = no
 			}
-			# AI will also go HEAVILY into debt. Give some gold
-			add_gold = 1000
+			
 		}
 	}
 	option = {

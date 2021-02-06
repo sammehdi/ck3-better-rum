@@ -62,6 +62,8 @@ custom_rum = {
 		c_satala c_colonea c_cerasus
 		# Same with d_opsikion
 		c_phrygia c_prusa c_mysia 
+		# And a bit of Syria since Byzantines often conquer this
+		c_shayzar
 	}
 }
 

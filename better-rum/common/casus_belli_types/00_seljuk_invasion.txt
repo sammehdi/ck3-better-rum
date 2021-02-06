@@ -27,10 +27,12 @@ seljuk_armenia_cb = {
 		}
 	}
 
-	#allowed_for_character = {}
+	allowed_for_character = {
+		has_title = title:e_persia
+	}
 
 	allowed_against_character = {
-		#faith.religion = scope:attacker.faith.religion
+		completely_controls = title:c_vaspurakan
 	}
 
 	# Root is the title
@@ -567,23 +569,7 @@ seljuk_armenia_cb = {
 		}
 	}
 
-	should_invalidate = {
-		NOT = {
-			any_in_list = {
-				list = target_titles
-				any_in_de_jure_hierarchy = {
-					tier >= tier_county
-					exists = holder
-					holder = {
-						OR = {
-							this = scope:defender
-							target_is_liege_or_above = scope:defender
-						}
-					}
-				}
-			}
-		}
-	}
+	# removed "should invalidate"
 
 	on_invalidated_desc = msg_claim_war_invalidated_message
 	
@@ -684,13 +670,25 @@ seljuk_armenia_cb = {
 		}
 		
 		scope:attacker = {
-			# Add 10 year truce with Byzantine Emperor
-			add_truce_one_way = {
-				character = scope:defender
-				years = 10
-				result = victory
-				war = root.war
+			# Add 15 year truce with Byzantine Emperor if AI (will be circumvented via event), 10 year truce if not AI
+			if = {
+				limit = { is_ai = yes }
+				add_truce_one_way = {
+					character = scope:defender
+					years = 15
+					result = victory
+					war = root.war
+				}
 			}
+			else = {
+				add_truce_one_way = {
+					character = scope:defender
+					years = 10
+					result = victory
+					war = root.war
+				}
+			}
+			
 		}
 		
 		scope:attacker = {
@@ -702,13 +700,30 @@ seljuk_armenia_cb = {
 						is_landed = yes
 					}
 				}
-				add_truce_one_way = {
-					character = scope:defender.primary_heir
-					years = 10
-					result = victory
-					war = root.war
+				if = {
+					limit = { is_ai = yes }
+					add_truce_one_way = {
+						character = scope:defender.primary_heir
+						years = 15
+						result = victory
+						war = root.war
+					}
+				}
+				else = {
+					add_truce_one_way = {
+						character = scope:defender.primary_heir
+						years = 10
+						result = victory
+						war = root.war
+					}
 				}
 			}
+		}
+		
+		# indicate that war for Armenia was won
+		add_to_global_variable_list = {
+			name = seljuk_invasion_progress
+			target = flag:flag_won_armenia
 		}
 		
 		# trigger first of Seljuk Invasion of Asia Minor event chain
@@ -722,15 +737,16 @@ seljuk_armenia_cb = {
 				trigger_event = {
 					id = seljuk_invasion_events.0001
 				}
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					trigger_event = {
-						id = seljuk_invasion_events.1000
-						years = 1
-					}
-				}
+				# Old way to trigger AI war, different way was implemented
+				#if = {
+				#	limit = {
+				#		is_ai = yes
+				#	}
+				#	trigger_event = {
+				#		id = seljuk_invasion_events.1000
+				#		years = 10
+				#	}
+				#}
 			}
 			title:e_byzantium.holder = {
 				trigger_event = {
@@ -1247,6 +1263,10 @@ seljuk_invasion_cb = {
 
 	on_declaration = {
 		on_declared_war = yes
+		add_to_global_variable_list = {
+			name = seljuk_invasion_progress
+			target = flag:flag_invaded_asia_minor
+		}
 		if = {
 			limit = {
 				character:3046 = {
@@ -1263,10 +1283,6 @@ seljuk_invasion_cb = {
 		}
 		title:e_byzantium.holder = {
 			trigger_event = seljuk_invasion_events.0005
-		}
-		# one time war
-		scope:attacker.house = {
-			remove_house_modifier = seljuk_invasion_modifier
 		}
 	}
 
@@ -1432,10 +1448,17 @@ seljuk_invasion_cb = {
 				}
 				title:e_persia.holder = {
 					set_relation_nemesis = character:3046
-					every_heir = {
+					primary_heir = {
 						set_relation_rival = character:3046
 					}
 					add_pressed_claim = title:k_rum
+				}
+				# additionally, set Suleiman's heirs as rivals
+				character:3046 = {
+					primary_heir = {
+						set_relation_rival = title:e_persia.holder
+						set_relation_rival = title:e_persia.holder.primary_heir
+					}
 				}
 			}
 		}
@@ -1461,6 +1484,16 @@ seljuk_invasion_cb = {
 				title:k_rum.holder = {
 					trigger_event = seljuk_invasion_events.0007
 				}
+			}
+			
+			# Get rid of Conquest modifier too
+			scope:attacker.house = {
+				remove_house_modifier = seljuk_invasion_modifier
+			}
+			
+			# Give Suleiman some money too, he's going to need it
+			title:k_rum.holder = {
+				add_gold = 1000
 			}
 		}
 
@@ -1589,6 +1622,11 @@ seljuk_invasion_cb = {
 			save_temporary_scope_as = loser
 		}
 		on_lost_aggression_war_discontent_loss = yes
+		
+		# Get rid of Conquest modifier too, since the Seljuks were crushed in the war
+		scope:attacker.house = {
+			remove_house_modifier = seljuk_invasion_modifier
+		}
 	}
 
 	on_invalidated_desc = msg_county_conquest_war_invalidated_message
@@ -1610,10 +1648,10 @@ seljuk_invasion_cb = {
 	use_de_jure_wargoal_only = yes
 
 	# Modifications to make the war take more effort. Goal of these changes is to make Seljuks focus on occupying much of Asia Minor to get ticking war score
-	attacker_wargoal_percentage = 0.3 # once Seljuks occupy 30% of Asia Minor (and that's a lot, trust me), they get significant ticking war score
+	attacker_wargoal_percentage = 0.25 # once Seljuks occupy 25% of Asia Minor (and that's a lot, trust me), they get significant ticking war score
 	attacker_ticking_warscore = 0.4 # default is 0.1
-	attacker_score_from_battles_scale = 30 # default is 40
-	attacker_score_from_occupation_scale = 70 # default is 100
+	attacker_score_from_battles_scale = 20 # default is 40
+	attacker_score_from_occupation_scale = 50 # default is 100
 	
 
 	max_ai_diplo_distance_to_title = 500
