@@ -8,15 +8,16 @@ Historically, the Great Seljuk Empire took over nearly all of Asia Minor. One of
 Check the mod out on Steam [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2386400908).
 
 # Specific Changelog
-- Installed Suleyman ibn Qutulmish in Marash, on the border between the Byzantine and Seljuk Empires. Gave him ~1000 troops so he wouldn't immediate die
+- Installed Suleyman ibn Qutulmish in Marash, on the border between the Byzantine and Seljuk Empires. Gave him ~1000 troops so he wouldn't immediately die
 - Created new events that are triggered when the Seljuks win the Invasion of Armenia
 - Created new casus belli that the Seljuk Emperor can use to invade nearly all of Asia Minor
-- AI will always use this casus belli on 1080.1.1, even if they have a truce with the Byzantines
+- AI will always use this casus belli on 1080.1.1, even if they have a truce with the Byzantines (which is bypassed)
 - Suleyman joins Seljuk Emperor when Seljuk Emperor declares war for Asia Minor
 - Suleyman installs himself as Sultan of Rum once that war is won, with the Seljuk Emperor getting a pressed claim to the Sultanate of Rum
 - Added very strong modifier to simulate Turkish immigration to Asia Minor following the invasion
 - Buffed the following characters: Suleyman ibn Qutalmish, his son Kilij Arslan, Seljuk successor Malik Shah, Alexios Komnenos
 - Set Malik Shah as Seljuk Emperor's designated heir (to follow history)
 - Added a "Destroy Rum" decision for the Byzantine Emperor to take to reverse the De Jure changes caused when Rum was created
+- Buffed Oghuz culture innovations so that Seljuk players don't need to culture swap (this was to fix flavor)
 
 That's about it!
