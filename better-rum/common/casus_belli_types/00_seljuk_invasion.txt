@@ -1,5 +1,6 @@
-﻿# First, this casus belli is the EXACT SAME as the regular 'conquest' casus belli, except 
+﻿# First, this casus belli is very similar to the regular 'conquest' casus belli, except 
 # for the event that Alp Arslan/whoever the Seljuk ruler is will get after that.
+# Additionally, makes the war easier for the Seljuks to win more quickly.
 # Go to line ~900 for the special CB
 seljuk_armenia_cb = {
 	group = claim
@@ -930,8 +931,8 @@ seljuk_armenia_cb = {
 
 	should_show_war_goal_subview = yes
 
-	attacker_wargoal_percentage = 0.8
-	max_attacker_score_from_battles = 75 # AI focuses a lot more on battles, so this will help finish the war more quickly
+	attacker_wargoal_percentage = 0.3
+	max_attacker_score_from_battles = 80 # AI focuses a lot more on battles, so this will help finish the war more quickly
 
 	max_ai_diplo_distance_to_title = 1000
 	min_ai_score = 100
@@ -1475,6 +1476,7 @@ seljuk_invasion_cb = {
 				}
 				title:k_rum.holder = {
 					set_realm_capital = title:d_anatolia.title_capital_county
+					add_gold = 1000
 				}
 				# Eat kingdoms into Rum
 				de_jure_changes_asia_minor = yes
