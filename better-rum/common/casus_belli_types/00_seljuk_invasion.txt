@@ -560,14 +560,6 @@ seljuk_armenia_cb = {
 
 	on_declaration = {
 		on_declared_war = yes
-		if = {
-			limit = {
-				scope:defender = { is_sibling_of = scope:attacker }
-			}
-			scope:attacker = {
-				add_achievement_flag = { FLAG = achievement_bad_blood_flag }
-			}
-		}
 	}
 
 	# removed "should invalidate"
@@ -935,7 +927,6 @@ seljuk_armenia_cb = {
 	max_attacker_score_from_battles = 80 # AI focuses a lot more on battles, so this will help finish the war more quickly
 
 	max_ai_diplo_distance_to_title = 1000
-	min_ai_score = 100
 }
 
 # A special casus belli that lets the Seljuks invade all of Asia minor.
@@ -1659,5 +1650,4 @@ seljuk_invasion_cb = {
 	
 
 	max_ai_diplo_distance_to_title = 500
-	min_ai_score = 100
 }

@@ -7,7 +7,7 @@ tags={
 	"Events"
 	"Decisions"
 }
-name="Better Rum"
+name="Seljuk Invasion of Asia Minor"
 picture="thumbnail.png"
 supported_version="1.4.*"
 remote_file_id="2386400908"
